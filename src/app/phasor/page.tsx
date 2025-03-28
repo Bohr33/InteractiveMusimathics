@@ -1,32 +1,4 @@
 
-// "use client"
-// import { useEffect } from "react";
-
-// export default function PhasorPage() {
-//   useEffect(() => {
-//     const script = document.createElement("script");
-//     script.src = "/p5-sketch/p5.js"; // Load p5.js
-//     script.async = true;
-//     document.body.appendChild(script);
-
-//     const sketchScript = document.createElement("script");
-//     sketchScript.src = "/p5-sketch/sketch.js"; // Load your sketch
-//     sketchScript.async = true;
-//     document.body.appendChild(sketchScript);
-
-//     return () => {
-//       document.body.removeChild(script);
-//       document.body.removeChild(sketchScript);
-//     };
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>Phasor Visualization</h1>
-//       <div id="p5-container" />
-//     </div>
-//   );
-// }
 "use client"
 import { useEffect } from "react";
 
