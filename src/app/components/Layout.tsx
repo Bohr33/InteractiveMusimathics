@@ -10,8 +10,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </Link>
           <Link href="/fourier">Fourier</Link>
           <Link href="/display">Notes</Link>
-          {/* <Link href="/filters">Filters</Link> */}
+          <Link href="/filters">Filters</Link>
           <Link href="/phasor">phasor</Link>
+          <Link href="/MathTest">mathTest</Link>
+          <Link href="/FilterVisualizer">FilterVisualizer</Link>
       </nav>
 
       </header>

@@ -31,6 +31,8 @@ export async function getMarkdownContent(filename: string) {
       .use(rehypeKatex)        // Render KaTeX math equations
       .use(rehypeStringify)    // Convert the HTML back into a string
       .process(processedContent.toString())
+
+      console.log(finalHtml);
     
     // Convert markdown to HTML
     return finalHtml.toString();

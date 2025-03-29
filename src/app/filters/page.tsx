@@ -6,7 +6,6 @@ export default async function FilterPage() {
 
   return (
     <main>
-      <h1>Math Notes</h1>
       <div className="markdown" dangerouslySetInnerHTML={{ __html: noteContent }} />
     </main>
   );

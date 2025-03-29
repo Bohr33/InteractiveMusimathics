@@ -37,22 +37,24 @@ body {
 
 
   /* Markdown Styling */
+
 .markdown h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  border-bottom: 2px solid black;
 }
 
 .markdown h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .markdown h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
