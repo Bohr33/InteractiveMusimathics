@@ -9,10 +9,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeStringify from "rehype-stringify";
 import remarkHtml from "remark-html";
 
-export async function getMarkdownContent(filename: string) {
-
-    const filePath = path.join(process.cwd(), "src","app", "notes", filename);
-    const fileContent = fs.readFileSync(filePath, "utf8");
+export async function Convert2Markdown(fileContent: string) {
     
     // Preprocess to add space after '#' for headers
     const fixedContent = fileContent.replace(/(#+)([^\s#])/g, '$1 $2');
@@ -31,6 +28,7 @@ export async function getMarkdownContent(filename: string) {
       .use(rehypeKatex)        // Render KaTeX math equations
       .use(rehypeStringify)    // Convert the HTML back into a string
       .process(processedContent.toString())
+
     
     // Convert markdown to HTML
     return finalHtml.toString();

@@ -1,5 +1,5 @@
 import React from 'react';
-import { complex, Complex, add, multiply, divide, abs, arg } from 'mathjs';
+import { complex, Complex, add, multiply, divide, abs, arg, pow } from 'mathjs';
 
 const ComplexMathTester = () => {
   // Define some complex numbers for testing
@@ -14,6 +14,8 @@ const ComplexMathTester = () => {
   // Magnitude and phase
   const magnitudeZ1: Complex = abs(z1) as Complex; // Magnitude of z1
   const phaseZ1 = arg(z1);     // Phase of z1 (in radians)
+
+  const test = pow(2, 6);
 
   return (
     <div>

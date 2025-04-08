@@ -14,6 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Link href="/phasor">phasor</Link>
           <Link href="/MathTest">mathTest</Link>
           <Link href="/FilterVisualizer">FilterVisualizer</Link>
+          <Link href="/notes2">New Notes</Link>
       </nav>
 
       </header>
