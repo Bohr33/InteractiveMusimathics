@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+
+//This function creates the navigation bar on the side. It is included with every loaded page on the site.
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
@@ -8,13 +10,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Link href="/" className="text-blue-500 hover:underline">
           Home
         </Link>
-          <Link href="/fourier">Fourier</Link>
-          <Link href="/display">Notes</Link>
-          <Link href="/filters">Filters</Link>
           <Link href="/phasor">phasor</Link>
-          <Link href="/MathTest">mathTest</Link>
           <Link href="/FilterVisualizer">FilterVisualizer</Link>
           <Link href="/notes2">New Notes</Link>
+          <Link href="/test">Notes Nav</Link>
       </nav>
 
       </header>

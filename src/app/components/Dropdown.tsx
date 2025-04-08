@@ -21,16 +21,16 @@ export default function Dropdown({ label, children }: DropdownProps) {
   }, []);
 
   return (
-    <div ref={dropdownRef} className="relative inline-block text-left">
+    <div ref={dropdownRef} className="relative inline-block text-left bg-white dark:bg-gray-800 text-black dark:text-white">
       <div
         onClick={() => setOpen(!open)}
-        className="inline-flex justify-center items-center w-full border px-4 py-2 bg-white text-2xl font-medium hover:bg-gray-50 cursor-pointer"
+        className="inline-flex justify-center items-center w-full border px-4 py-2 bg-white dark:bg-gray-800 text-2xl font-medium hover:bg-gray-50 cursor-pointer"
       >
         {label}
       </div>
 
       {open && (
-        <div className="text-center">
+        <div className="text-center ">
           <div className="py-1">{children}</div>
         </div>
       )}

@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
-import { getMarkdownContent } from '@/app/utils/getMarkdownContent';
-import { Convert2Markdown } from '@/app/utils/Convert2Markdown';
+import { ConvertMarkdown } from '@/app/utils/ConvertMarkdown';
 
 type Props = {
   params: {
@@ -10,7 +9,6 @@ type Props = {
     note: string;
   };
 };
-
 
 export async function generateStaticParams() {
   const basePath = path.join(process.cwd(), 'notes2');
@@ -41,9 +39,6 @@ export default async function NotePage({ params }: Props) {
     `${note}.md`
   );
 
-  console.log(filePath);
-  console.log("Hello!");
-
   let fileContent: string;
   try {
     fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -51,7 +46,7 @@ export default async function NotePage({ params }: Props) {
     notFound();
   }
 
-  const noteContent = await Convert2Markdown(fileContent);
+  const noteContent = await ConvertMarkdown(fileContent);
 
   return (
     <div className="max-w-3xl mx-auto p-6 prose dark:prose-invert">

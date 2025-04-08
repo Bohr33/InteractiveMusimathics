@@ -9,7 +9,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeStringify from "rehype-stringify";
 import remarkHtml from "remark-html";
 
-export async function Convert2Markdown(fileContent: string) {
+export async function ConvertMarkdown(fileContent: string) {
     
     // Preprocess to add space after '#' for headers
     const fixedContent = fileContent.replace(/(#+)([^\s#])/g, '$1 $2');
